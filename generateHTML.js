@@ -180,4 +180,9 @@ const colors = {
         </body>
       </html>`
   }
+
+  module.exports = {
+      generateHTML: generateHTML,
+      colors: colors
+  }
   
