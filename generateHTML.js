@@ -174,6 +174,9 @@ const colors = {
         </head>
         <body>
           
+
+
+        module.exports 
         </body>
       </html>`
   }
