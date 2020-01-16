@@ -18,6 +18,7 @@
   "homepage": "https://github.com/benabbott85/B-Abbott-HW-8#readme",
   "dependencies": {
     "axios": "^0.19.1",
+    "electron-pdf": "^4.0.8",
     "inquirer": "^7.0.3"
   }
 }
