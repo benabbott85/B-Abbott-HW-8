@@ -2,7 +2,7 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const axios = require("axios");
 const generateHTML =require("./generateHTML.js");
-const ElectronPDF = require("electron-pdf");
+const pdf = require('html-pdf');
 
 let color;
 
@@ -48,15 +48,19 @@ inquirer
                 case "green":
                     color = generateHTML.colors.green;
             }
-            console.log(color)
+            // console.log(color)
+            const testing = generateHTML.generateHTML(response.data, color);
+            const options = { format: 'Letter' };
+           pdf.create(testing).toFile(`${username}.pdf`, function (error, result){
+               if (error)return console.log(error);
+               console.log(`Profile created at ${username}.pdf`)
+           })    
+            
         })
 });
 
 
 
-const questions = [
-  
-];
 
 function writeToFile(fileName, data) {
  
